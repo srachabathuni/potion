@@ -190,7 +190,7 @@ json::object Request::get_json() {
   json::object obj;
 
   try {
-    std::error_code ec;
+    boost::json::error_code ec;
     jv = json::parse(json_string, ec);
     if (ec) {
       std::cout << "JSON Parse failed\n";
